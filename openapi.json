@@ -1,0 +1,56 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Uzi Server API",
+        "description": "API for getting time information and assistant responses",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/get_time_info": {
+            "post": {
+                "summary": "Get time information and assistant response",
+                "description": "Sends a timezone and gets the current time and a response from GPT-4.",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "timezone": {
+                                        "type": "string",
+                                        "description": "The timezone to calculate the current time.",
+                                        "example": "Asia/Jerusalem"
+                                    }
+                                },
+                                "required": ["timezone"]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "current_time": {
+                                            "type": "string",
+                                            "description": "The current time in the specified timezone."
+                                        },
+                                        "assistant_response": {
+                                            "type": "string",
+                                            "description": "Response from GPT-4."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
