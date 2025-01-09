@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "http://192.168.1.142:5000",
+            "url": "http://192.168.1.196:5000",
             "description": "Local server for development"
         }
     ],
