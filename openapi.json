@@ -14,6 +14,7 @@
     "paths": {
         "/get_time_info": {
             "post": {
+                "operationId": "getTimeInfo",  // הוספנו כאן את ה-operationId
                 "summary": "Get time information and assistant response",
                 "description": "Sends a timezone and gets the current time and a response from GPT-4.",
                 "requestBody": {
