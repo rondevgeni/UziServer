@@ -3,7 +3,7 @@
     "info": {
         "title": "Uzi Server API",
         "description": "API for getting time information and assistant responses",
-        "version": "1.0.0"
+       "version": "1.0.0"
     },
     "servers": [
         {
