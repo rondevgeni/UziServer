@@ -29,7 +29,7 @@ def chat():
     return jsonify({"response": f"You said: {user_input}"})
 
 
-@app.route('/get_time_info', methods=['POST'])
+@app.route('/get_time_info', methods=['GET','POST'])
 def get_time_info():
     try:
         # קריאה לנתוני אזור הזמן מהבקשה

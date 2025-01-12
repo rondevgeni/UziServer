@@ -5,6 +5,12 @@
         "description": "API for getting time information and assistant responses",
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "https://518b-5-29-13-57.ngrok-free.app",
+            "description": "Public server via ngrok"
+        }
+    ],
     "paths": {
         "/get_time_info": {
             "post": {
